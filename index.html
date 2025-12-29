@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subject Dashboard</title>
+
+<style>
+/* ===== Subject Dashboard CSS ===== */
+
+body{
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg,#e3f2fd,#f9fbe7);
+  margin:0;
+  padding:0;
+}
+
+.dashboard{
+  max-width:900px;
+  margin:20px auto;
+  padding:20px;
+}
+
+.dashboard h1{
+  text-align:center;
+  color:#1f3c88;
+  margin-bottom:25px;
+}
+
+/* Semester blocks */
+.semester{
+  background:white;
+  border-radius:12px;
+  padding:20px;
+  margin-bottom:20px;
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+.semester h2{
+  color:#2e7d32;
+  margin-bottom:15px;
+  border-bottom:2px solid #e0e0e0;
+  padding-bottom:6px;
+}
+
+/* Subject buttons grid */
+.subjects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+}
+
+.subject-btn{
+  padding:18px;
+  font-size:18px;
+  font-weight:bold;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  color:white;
+  transition:all 0.3s ease;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.subject-btn:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 8px 18px rgba(0,0,0,0.3);
+}
+
+/* Subject colors */
+.dsp{ background:linear-gradient(135deg,#1565c0,#42a5f5); }
+.osa{ background:linear-gradient(135deg,#2e7d32,#66bb6a); }
+.sepp{ background:linear-gradient(135deg,#ef6c00,#ffb74d); }
+.java{ background:linear-gradient(135deg,#6a1b9a,#ab47bc); }
+.ic{ background:linear-gradient(135deg,#424242,#757575); }
+.overall{ background:linear-gradient(135deg,#1f3c88,#000); }
+
+/* Mobile */
+@media(max-width:600px){
+  .subject-btn{
+    font-size:16px;
+    padding:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+  <h1>📘 Subject Dashboard</h1>
+
+  <!-- 2nd Semester -->
+  <div class="semester">
+  
+    <div class="subjects">
+      <button class="subject-btn dsp" onclick="location.href='python.html'">DSP</button>
+      <button class="subject-btn osa" onclick="location.href='osa.html'">OSA</button>
+      <button class="subject-btn sepp" onclick="location.href='sepp.html'">SEPP</button>
+    </div>
+  </div>
+
+  <!-- 4th Semester -->
+  <div class="semester">
+   
+    <div class="subjects">
+      <button class="subject-btn java" onclick="location.href='java.html'">JAVA</button>
+      <button class="subject-btn ic" onclick="location.href='ic.html'">IC</button>
+    </div>
+  </div>
+
+  <!-- Overall -->
+  <div class="semester">
+    
+    <div class="subjects">
+      <button class="subject-btn overall" onclick="location.href='overall.html'">
+       
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
